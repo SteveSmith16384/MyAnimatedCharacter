@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 0.5, 2, 0.5 )
+
+[node name="LegMesh" type="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.701998, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = null
