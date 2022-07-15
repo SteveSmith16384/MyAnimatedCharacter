@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://LegMesh.tscn" type="PackedScene" id=1]
 [ext_resource path="res://FootMesh.tscn" type="PackedScene" id=2]
+[ext_resource path="res://RunningSprite.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=2]
-length = 4.0
+length = 18.0
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Waist/UpperLeftLeg:rotation_degrees:x")
 tracks/0/interp = 1
@@ -125,11 +126,36 @@ tracks/11/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
+tracks/12/type = "value"
+tracks/12/path = NodePath("Waist/UpperRightLeg/LowerRightLeg:rotation_degrees")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -90, 0, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Waist/UpperRightLeg/LowerRightLeg/RightFoot:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -18.177, 0, 0 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "Walk"
-length = 8.0
+length = 18.0
 loop = true
+step = 1.0
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Waist/UpperLeftLeg:rotation_degrees:x")
 tracks/0/interp = 1
@@ -137,8 +163,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 11.75, -0.25, 0, 0.25, 0, 26.918, -0.25, 0, 0.25, 0, 14.558, -0.25, 0, 0.25, 0, -11.494, -0.25, 0, 0.25, 0, -17.136, -0.25, 0, 0.25, 0, -17.136, -0.25, 0, 0.25, 0, 13.594, -0.25, 0, 0.25, 0, 13.594, -0.25, 0, 0.25, 0, 9.146, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8 )
+"points": PoolRealArray( 20.604, -0.25, 0, 0.25, 0, 19.612, -0.25, 0, 0.25, 0, 14.151, -0.25, 0, 0.25, 0, 9.79, -0.25, 0, 0.25, 0, 4.96, -0.25, 0, 0.25, 0, -17.136, -0.25, 0, 0.25, 0, -16.209, -0.25, 0, 0.25, 0, -24.515, -0.25, 0, 0.25, 0, -21.184, -0.25, 0, 0.25, 0, -22.397, -0.25, 0, 0.25, 0, -8.683, -0.25, 0, 0.25, 0, -1.617, -0.25, 0, 0.25, 0, 12.828, -0.25, 0, 0.25, 0, 21.606, -0.25, 0, 0.25, 0, 38.111, -0.25, 0, 0.25, 0, 43.259, -0.25, 0, 0.25, 0, 37.003, -0.25, 0, 0.25, 0, 32.327, -0.25, 0, 0.25, 0, 30.131, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 7.1, 8, 9.1, 9.9, 11, 12, 12.9, 13.9, 15, 16, 17 )
 }
 tracks/1/type = "bezier"
 tracks/1/path = NodePath("Waist/UpperLeftLeg:rotation_degrees:y")
@@ -147,8 +173,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8 )
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 7.1, 8, 9.1, 9.9, 11, 12, 12.9, 13.9, 15, 16, 17 )
 }
 tracks/2/type = "bezier"
 tracks/2/path = NodePath("Waist/UpperLeftLeg:rotation_degrees:z")
@@ -157,8 +183,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8 )
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 7.1, 8, 9.1, 9.9, 11, 12, 12.9, 13.9, 15, 16, 17 )
 }
 tracks/3/type = "bezier"
 tracks/3/path = NodePath("Waist/UpperLeftLeg/LowerLeftLeg:rotation_degrees:x")
@@ -167,8 +193,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -28.785, -0.25, 0, 0.25, 0, -21.399, -0.25, 0, 0.25, 0, -1.971, -0.25, 0, 0.25, 0, -18.264, -0.25, 0, 0.25, 0, -21.885, -0.25, 0, 0.25, 0, -41.782, -0.25, 0, 0.25, 0, -16.029, -0.25, 0, 0.25, 0, -3.157, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8 )
+"points": PoolRealArray( -11.566, -0.25, 0, 0.25, 0, -23.515, -0.25, 0, 0.25, 0, -24.379, -0.25, 0, 0.25, 0, -30.296, -0.25, 0, 0.25, 0, -31.0963, -0.25, 0, 0.25, 0, -30.81, -0.25, 0, 0.25, 0, -21.885, -0.25, 0, 0.25, 0, -28.246, -0.25, 0, 0.25, 0, -18.425, -0.25, 0, 0.25, 0, -26.2778, -0.25, 0, 0.25, 0, -48.08, -0.25, 0, 0.25, 0, -90.605, -0.25, 0, 0.25, 0, -113.296, -0.25, 0, 0.25, 0, -119.806, -0.25, 0, 0.25, 0, -123.851, -0.25, 0, 0.25, 0, -112.525, -0.25, 0, 0.25, 0, -92.243, -0.25, 0, 0.25, 0, -45.532, -0.25, 0, 0.25, 0, -34.53, -0.25, 0, 0.25, 0, -30.716, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 3.1, 4, 5, 6, 7, 7.1, 8, 9.1, 9.9, 11, 12, 12.9, 13.9, 15, 16, 17 )
 }
 tracks/4/type = "bezier"
 tracks/4/path = NodePath("Waist/UpperLeftLeg/LowerLeftLeg:rotation_degrees:y")
@@ -177,8 +203,8 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8 )
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 3.1, 4, 5, 6, 7, 7.1, 8, 9.1, 9.9, 11, 12, 12.9, 13.9, 15, 16, 17 )
 }
 tracks/5/type = "bezier"
 tracks/5/path = NodePath("Waist/UpperLeftLeg/LowerLeftLeg:rotation_degrees:z")
@@ -187,8 +213,8 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8 )
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 3.1, 4, 5, 6, 7, 7.1, 8, 9.1, 9.9, 11, 12, 12.9, 13.9, 15, 16, 17 )
 }
 tracks/6/type = "bezier"
 tracks/6/path = NodePath("Waist/UpperLeftLeg/LowerLeftLeg/LeftFoot:rotation_degrees:x")
@@ -197,8 +223,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0.955998, -0.25, 0, 0.25, 0, 3.5, -0.25, 0, 0.25, 0, 12.186, -0.25, 0, 0.25, 0, 7.692, -0.25, 0, 0.25, 0, 2.75, -0.25, 0, 0.25, 0, -54.588, -0.25, 0, 0.25, 0, -39.524, -0.25, 0, 0.25, 0, 9.771, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8 )
+"points": PoolRealArray( -11.986, -0.25, 0, 0.25, 0, -9.095, -0.25, 0, 0.25, 0, -3.854, -0.25, 0, 0.25, 0, -7.347, -0.25, 0, 0.25, 0, 0.366196, -0.25, 0, 0.25, 0, -4.206, -0.25, 0, 0.25, 0, 2.75, -0.25, 0, 0.25, 0, -12.151, -0.25, 0, 0.25, 0, -39.524, -0.25, 0, 0.25, 0, -19.0136, -0.25, 0, 0.25, 0, -6.55, -0.25, 0, 0.25, 0, -16.942, -0.25, 0, 0.25, 0, 2.18, -0.25, 0, 0.25, 0, -1.967, -0.25, 0, 0.25, 0, -1.967, -0.25, 0, 0.25, 0, -6.927, -0.25, 0, 0.25, 0, 1.36699, -0.25, 0, 0.25, 0, -4.423, -0.25, 0, 0.25, 0, -7.311, -0.25, 0, 0.25, 0, -10.123, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 3.1, 4, 5, 6, 7, 7.1, 8, 9.1, 9.9, 11, 12, 12.9, 13.9, 15, 16, 17 )
 }
 tracks/7/type = "bezier"
 tracks/7/path = NodePath("Waist/UpperLeftLeg/LowerLeftLeg/LeftFoot:rotation_degrees:y")
@@ -207,8 +233,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8 )
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 3.1, 4, 5, 6, 7, 7.1, 8, 9.1, 9.9, 11, 12, 12.9, 13.9, 15, 16, 17 )
 }
 tracks/8/type = "bezier"
 tracks/8/path = NodePath("Waist/UpperLeftLeg/LowerLeftLeg/LeftFoot:rotation_degrees:z")
@@ -217,8 +243,8 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8 )
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 3.1, 4, 5, 6, 7, 7.1, 8, 9.1, 9.9, 11, 12, 12.9, 13.9, 15, 16, 17 )
 }
 tracks/9/type = "bezier"
 tracks/9/path = NodePath("Waist/UpperRightLeg:rotation_degrees:x")
@@ -227,8 +253,8 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"points": PoolRealArray( -15.183, -0.25, 0, 0.25, 0, -15.183, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1 )
+"points": PoolRealArray( -6.767, -0.25, 0, 0.25, 0, -0.844, -0.25, 0, 0.25, 0, 14.91, -0.25, 0, 0.25, 0, 15.873, -0.25, 0, 0.25, 0, 35.941, -0.25, 0, 0.25, 0, 46.257, -0.25, 0, 0.25, 0, 39.778, -0.25, 0, 0.25, 0, 33.112, -0.25, 0, 0.25, 0, 22.94, -0.25, 0, 0.25, 0, 19.784, -0.25, 0, 0.25, 0, 12.604, -0.25, 0, 0.25, 0, 9.263, -0.25, 0, 0.25, 0, 5.65, -0.25, 0, 0.25, 0, -11.916, -0.25, 0, 0.25, 0, -18.879, -0.25, 0, 0.25, 0, -21.616, -0.25, 0, 0.25, 0, -21.616, -0.25, 0, 0.25, 0, -15.891, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 )
 }
 tracks/10/type = "bezier"
 tracks/10/path = NodePath("Waist/UpperRightLeg:rotation_degrees:y")
@@ -237,8 +263,8 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1 )
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 )
 }
 tracks/11/type = "bezier"
 tracks/11/path = NodePath("Waist/UpperRightLeg:rotation_degrees:z")
@@ -247,8 +273,32 @@ tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1 )
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 )
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Waist/UpperRightLeg/LowerRightLeg:rotation_degrees")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -90, 0, 0 ), Vector3( -112.441, 0, 0 ), Vector3( -118.311, 0, 0 ), Vector3( -117.039, 0, 0 ), Vector3( -108.956, 0, 0 ), Vector3( -86.1839, 0, 0 ), Vector3( -49.3354, 0, 0 ), Vector3( -34.4301, 0, 0 ), Vector3( -17.8129, 0, 0 ), Vector3( -22.0097, 0, 0 ), Vector3( -18.5341, 0, 0 ), Vector3( -25.3814, 0, 0 ), Vector3( -31.7636, 0, 0 ), Vector3( -19.4527, 0, 0 ), Vector3( -20.2111, 0, 0 ), Vector3( -22.8724, 0, 0 ), Vector3( -45.2482, 0, 0 ), Vector3( -69.9631, 0, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Waist/UpperRightLeg/LowerRightLeg/RightFoot:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -18.177, 0, 0 ), Vector3( -1.977, 0, 0 ), Vector3( -1.50895, 0, 0 ), Vector3( -2.5507, 0, 0 ), Vector3( 5.53255, 0, 0 ), Vector3( -6.74899, 0, 0 ), Vector3( -8.44207, 0, 0 ), Vector3( -15.7843, 0, 0 ), Vector3( -13.5018, 0, 0 ), Vector3( -8.03634, 0, 0 ), Vector3( -18.4961, 0, 0 ), Vector3( -10.4032, 0, 0 ), Vector3( -9.63474, 0, 0 ), Vector3( -29.5844, 0, 0 ), Vector3( -23.996, 0, 0 ), Vector3( -21.8542, 0, 0 ), Vector3( -20.6285, 0, 0 ), Vector3( -14.0257, 0, 0 ) ]
 }
 
 [sub_resource type="CubeMesh" id=5]
@@ -256,13 +306,19 @@ size = Vector3( 2, 1, 1 )
 
 [node name="Character" type="Spatial"]
 
+[node name="RunningSprite" parent="." instance=ExtResource( 3 )]
+transform = Transform( -2.18557e-07, 0, -6, 0, 5, 0, 5, 0, -2.62268e-07, -2, -2.936, -2.62 )
+frame = 17
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 4.0
 anims/RESET = SubResource( 2 )
 anims/Walk = SubResource( 3 )
 
 [node name="Waist" type="Spatial" parent="."]
 
 [node name="UpperLeftLeg" type="Spatial" parent="Waist"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.681924, 0 )
 
 [node name="LegMesh" parent="Waist/UpperLeftLeg" instance=ExtResource( 1 )]
 skeleton = NodePath("../../..")
@@ -275,27 +331,28 @@ transform = Transform( 1, 0, 0, 0, 0.998987, -0.0450042, 0, 0.0450042, 0.998987,
 skeleton = NodePath("../../../..")
 
 [node name="LeftFoot" type="Spatial" parent="Waist/UpperLeftLeg/LowerLeftLeg"]
-transform = Transform( 1, 0, 0, 0, 0.938734, -0.344643, 0, 0.344643, 0.938734, 0, -1.51568, -0.0930867 )
+transform = Transform( 1, 0, 0, 0, 0.938734, -0.344643, 0, 0.344643, 0.938734, 0, -1.51568, -0.0930862 )
 
 [node name="FootMesh" parent="Waist/UpperLeftLeg/LowerLeftLeg/LeftFoot" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3342 )
 
 [node name="UpperRightLeg" type="MeshInstance" parent="Waist"]
-transform = Transform( 1, 0, 0, 0, 0.965094, 0.261903, 0, -0.261903, 0.965094, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 0.965094, 0.261903, 0, -0.261903, 0.965094, 0, 0.682, 0 )
 
 [node name="LegMesh3" parent="Waist/UpperRightLeg" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16487, -0.623395, -0.0121169 )
 skeleton = NodePath("../../..")
 
 [node name="LowerRightLeg" type="Spatial" parent="Waist/UpperRightLeg"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16558, -1.52377, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.16558, -1.52377, -5.96046e-08 )
 
 [node name="LegMesh" parent="Waist/UpperRightLeg/LowerRightLeg" instance=ExtResource( 1 )]
 
 [node name="RightFoot" type="Spatial" parent="Waist/UpperRightLeg/LowerRightLeg"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.47357, -0.274718 )
+transform = Transform( 1, 0, 0, 0, 0.950097, 0.311954, 0, -0.311954, 0.950097, 0, -1.4992, -0.113465 )
 
 [node name="FootMesh" parent="Waist/UpperRightLeg/LowerRightLeg/RightFoot" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 0.997141, -0.0755704, 0, 0.0755704, 0.997141, 0, -0.0585163, -0.271223 )
 
 [node name="WaistMesh" type="MeshInstance" parent="Waist"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.494961, 0.806592, 0 )
